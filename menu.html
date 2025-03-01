@@ -99,81 +99,63 @@
                         <div class="col-lg-5">
                             <h5 class="uptitle">Foods</h5>
                             <h2>Main Dishes</h2>
-
                             <div class="spacer-half"></div>
-
-                            <div class="menu-item">
-                                <div class="c1">Chicken burger<span>Seasoned to perfection and grilled to juicy perfection</span></div>
-                                <div class="c2"></div>
-                                <div class="c3">4.75</div>
-                            </div>
-
-
-                            <div class="menu-item">
-                                <div class="c1">Chicken pizza<span>Seasoned chicken pieces, melting cheese, and of fresh vegetables.</span></div>
-                                <div class="c2"></div>
-                                <div class="c3">8.75</div>
-                            </div>
-
-
-                            <div class="menu-item">
-                                <div class="c1">Veg pizza<span>The medley of fresh vegetables</span></div>
-                                <div class="c2"></div>
-                                <div class="c3">6.75</div>
-                            </div>
-
-
-                            <div class="menu-item">
-                                <div class="c1">Chicken grilled pizza<span>Topped with succulent grilled chicken</span></div>
-                                <div class="c2"></div>
-                                <div class="c3">8.75</div>
-                            </div>
-
-
-                            <div class="menu-item">
-                                <div class="c1">Veg grilled pizza<span>The medley of fresh grilled vegetables</span></div>
-                                <div class="c2"></div>
-                                <div class="c3">6.75</div>
-                            </div>
-
-
-                            <div class="menu-item">
-                                <div class="c1">Chicken sandwich<span>Grilled chicken breast, toasted buns, lettuce, juicy tomatoes and creamy mayo</span></div>
-                                <div class="c2"></div>
-                                <div class="c3">4.75</div>
-                            </div>
-
-
-                            <div class="menu-item">
-                                <div class="c1">Veg sandwich<span>Toasted buns, the medley of fresh grilled vegetables and creamy mayo</span></div>
-                                <div class="c2"></div>
-                                <div class="c3">3.75</div>
-                            </div>
+                            <div id="main-dishes-menu-container"></div> <!-- Yer tutucu -->
                         </div>
                     </div>
                 </div>
-
                 <div class="image-container col-lg-6 offset-lg-6 h-100 top-0 jarallax" data-speed="-.2">
                     <img src="03_images/background/bg-side-4.jpg" class="jarallax-img" alt="">
                 </div>
             </section>
+
+            <section class="position-relative">
+                <div class="container">
+                    <div class="row align-items-center wow fadeInUp">
+                        <div class="col-lg-5 offset-lg-7">
+                            <h5 class="uptitle">Foods</h5>
+                            <h2>Snacks</h2>
+                            <div class="spacer-half"></div>
+                            <div id="snacks-menu-container"></div> <!-- Yer tutucu -->
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container col-lg-6 h-100 top-0 jarallax" data-speed="-.2">
+                    <img src="03_images/background/bg-side-2.jpg" class="jarallax-img" alt="">
+                </div>
+            </section>
+
             <section class="position-relative">
                 <div class="container">
                     <div class="row align-items-center wow fadeInUp">
                         <div class="col-lg-5">
-                            <h5 class="uptitle">Foods</h5>
-                            <h2>Main Dishes</h2>
-            
+                            <h5 class="uptitle">Drinks</h5>
+                            <h2>Coffee</h2>
                             <div class="spacer-half"></div>
-            
-                            <!-- MENÜ İÇERİKLERİNİN YÜKLENECEĞİ DİV -->
-                            <div id="menu-container"></div>
-                            <!-- BURAYA JAVASCRIPT İLE MENU.JSON VERİLERİ EKLENECEK -->
+                            <div id="coffee-menu-container"></div> <!-- Yer tutucu -->
                         </div>
                     </div>
                 </div>
+                <div class="image-container col-lg-6 offset-lg-6 h-100 top-0 jarallax" data-speed="-.2">
+                    <img src="03_images/background/bg-side-1.jpg" class="jarallax-img" alt="">
+                </div>
             </section>
-            
+
+            <section class="position-relative">
+                <div class="container">
+                    <div class="row align-items-center wow fadeInUp">
+                        <div class="col-lg-5 offset-lg-7">
+                            <h5 class="uptitle">Drinks</h5>
+                            <h2>Non Coffee</h2>
+                            <div class="spacer-half"></div>
+                            <div id="non-coffee-menu-container"></div> <!-- Yer tutucu -->
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container col-lg-6 h-100 top-0 jarallax" data-speed="-.2">
+                    <img src="03_images/background/bg-side-5.jpg" class="jarallax-img" alt="">
+                </div>
+            </section>
 
         </div>
 
@@ -185,7 +167,7 @@
                         <h3>Our Location</h3>
                         Collins Street West, Victoria 8007 Australia<br>
                         T. (208) 333 9296<br>
-                        E. contact@baresto.com<br>
+                        E. <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6a0905041e0b091e2a080b180f191e0544090507">[email&#160;protected]</a><br>
                     </div>
                     <div class="col-lg-4 text-center">
                         <img class="logo" src="03_images/logo.png" alt="">
@@ -210,39 +192,89 @@
         </div>
     </div>
 
-
-
     <!-- Javascript Files
     ================================================== -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         async function loadMenu() {
-          const response = await fetch('data/menu.json');
-          const menuItems = await response.json();
-      
-          const menuContainer = document.getElementById('menu-container');
-          menuContainer.innerHTML = '';
-      
-          menuItems.forEach(item => {
-            const menuItem = `
-              <div class="menu-item">
-                <img src="${item.image}" alt="${item.name}" class="menu-image">
-                <div class="menu-text">
-                  <h3>${item.name}</h3>
-                  <p>${item.description}</p>
-                  <span class="menu-price">$${item.price}</span>
-                </div>
-              </div>
-            `;
-            menuContainer.innerHTML += menuItem;
-          });
+            const spaceId = '2sft1e9b0hj9'; // Contentful Space ID
+            const accessToken = 'p9MTgfg7YifPfYvpEDaI54plj3GKjUiAYqBdWpL73dI'; // Content Delivery API Access Token
+
+            try {
+                // Main Dishes
+                const mainDishesResponse = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=menuItem&fields.category=Main Dishes`);
+                const mainDishesData = await mainDishesResponse.json();
+                const mainDishesContainer = document.getElementById('main-dishes-menu-container');
+                mainDishesContainer.innerHTML = '<div class="menu-item thead"><div class="c1"></div><div class="c2"></div><div class="c3">Price</div></div>';
+                mainDishesData.items.forEach(item => {
+                    const menuItem = `
+                        <div class="menu-item">
+                            <div class="c1">${item.fields.name}<span>${item.fields.description}</span></div>
+                            <div class="c2"></div>
+                            <div class="c3">${item.fields.price}</div>
+                        </div>
+                    `;
+                    mainDishesContainer.innerHTML += menuItem;
+                });
+
+                // Snacks
+                const snacksResponse = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=menuItem&fields.category=Snacks`);
+                const snacksData = await snacksResponse.json();
+                const snacksContainer = document.getElementById('snacks-menu-container');
+                snacksContainer.innerHTML = '<div class="menu-item thead"><div class="c1"></div><div class="c2"></div><div class="c3">Price</div></div>';
+                snacksData.items.forEach(item => {
+                    const menuItem = `
+                        <div class="menu-item">
+                            <div class="c1">${item.fields.name}<span>${item.fields.description}</span></div>
+                            <div class="c2"></div>
+                            <div class="c3">${item.fields.price}</div>
+                        </div>
+                    `;
+                    snacksContainer.innerHTML += menuItem;
+                });
+
+                // Coffee
+                const coffeeResponse = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=menuItem&fields.category=Coffee`);
+                const coffeeData = await coffeeResponse.json();
+                const coffeeContainer = document.getElementById('coffee-menu-container');
+                coffeeContainer.innerHTML = '<div class="menu-item thead"><div class="c1"></div><div class="c2">Medium<span>16 oz</span></div><div class="c3">Large<span>20 oz</span></div></div>';
+                coffeeData.items.forEach(item => {
+                    const menuItem = `
+                        <div class="menu-item">
+                            <div class="c1">${item.fields.name}<span>${item.fields.description}</span></div>
+                            <div class="c2">${item.fields.price_medium || ''}</div>
+                            <div class="c3">${item.fields.price_large || ''}</div>
+                        </div>
+                    `;
+                    coffeeContainer.innerHTML += menuItem;
+                });
+
+                // Non Coffee
+                const nonCoffeeResponse = await fetch(`https://cdn.contentful.com/spaces/${spaceId}/entries?access_token=${accessToken}&content_type=menuItem&fields.category=Non Coffee`);
+                const nonCoffeeData = await nonCoffeeResponse.json();
+                const nonCoffeeContainer = document.getElementById('non-coffee-menu-container');
+                nonCoffeeContainer.innerHTML = '<div class="menu-item thead"><div class="c1"></div><div class="c2">Medium<span>16 oz</span></div><div class="c3">Large<span>20 oz</span></div></div>';
+                nonCoffeeData.items.forEach(item => {
+                    const menuItem = `
+                        <div class="menu-item">
+                            <div class="c1">${item.fields.name}<span>${item.fields.description}</span></div>
+                            <div class="c2">${item.fields.price_medium || ''}</div>
+                            <div class="c3">${item.fields.price_large || ''}</div>
+                        </div>
+                    `;
+                    nonCoffeeContainer.innerHTML += menuItem;
+                });
+            } catch (error) {
+                console.error('Error loading menu:', error);
+            }
         }
-      
+
         document.addEventListener('DOMContentLoaded', loadMenu);
-      </script>
-      
+    </script>
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
 
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'91992f07eb5b135d',t:'MTc0MDgzNzY1OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 
 </html>
