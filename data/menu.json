@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Chicken Burger",
+      "description": "Seasoned to perfection and grilled to juicy perfection",
+      "price": "4.75",
+      "category": "Main Dishes",
+      "image": "/images/uploads/chicken-burger.jpg"
+    },
+    {
+      "name": "Veg Pizza",
+      "description": "The medley of fresh vegetables",
+      "price": "6.75",
+      "category": "Main Dishes",
+      "image": "/images/uploads/veg-pizza.jpg"
+    },
+    {
+      "name": "Espresso",
+      "description": "Espresso, where passion meets perfection.",
+      "price": "1.75",
+      "category": "Drinks",
+      "image": "/images/uploads/espresso.jpg"
+    }
+  ]
+  
